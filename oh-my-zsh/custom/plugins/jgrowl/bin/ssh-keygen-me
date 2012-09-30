@@ -1,0 +1,4 @@
+#!/bin/zsh
+ME=`whoami`
+HOSTNAME=`hostname`
+ssh-keygen -t rsa -C "$ME@$HOSTNAME"

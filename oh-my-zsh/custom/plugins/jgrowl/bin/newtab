@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Make a new iTerm2 tab with the current working directory.
+
+if [ $# -ne 1 ]; then
+    PATHDIR=`pwd`
+else
+    PATHDIR=$1
+fi
+
+/usr/bin/osascript <<-EOF
+tell application "iTerm"
+  tell the first terminal
+    launch session "Default"
+    tell the last session
+      write text "cd $PATHDIR; clear"
+    end tell
+  end tell
+end tell
+EOF
