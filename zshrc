@@ -3,7 +3,7 @@ ZSH_THEME="jgrowl"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="false"
 
-plugins=(git bundler brew gem svn jgrowl corrisoft git-flow)
+plugins=(git bundler brew gem jgrowl corrisoft git-flow)
 
 export PATH="/usr/local/bin:$PATH"
 
