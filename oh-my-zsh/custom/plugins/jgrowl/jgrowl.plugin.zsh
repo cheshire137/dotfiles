@@ -35,4 +35,4 @@ alias whatsmyip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' 
 #alias ff='find ~/ -type f -name '
 
 # add plugin's bin directory to path
-export PATH="$(dirname $0)/bin:$PATH"
+export PATH="$(dirname $0)/bin:/usr/local/mysql/bin:$HOME/.rvm/bin:$PATH"
