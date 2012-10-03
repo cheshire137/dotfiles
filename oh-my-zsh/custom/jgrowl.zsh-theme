@@ -1,5 +1,5 @@
-PROMPT='%3~$(svn_prompt_info)%# '
-#PROMPT='%3~$(git_prompt_info)%# '
+#PROMPT='%3~$(svn_prompt_info)%# '
+PROMPT='%3~$(git_prompt_info)%# '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]"
