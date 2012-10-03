@@ -30,6 +30,7 @@ alias sup='svn up'
 alias sm='svn merge'
 alias sshsu='ssh jonathan@spectr.us'
 alias set-active='unlink ~/code/active &> /dev/null; ln -s $PWD ~/code/active'
+alias whatsmyip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 
 #alias ff='find ~/ -type f -name '
 
