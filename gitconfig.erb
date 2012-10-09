@@ -3,10 +3,16 @@
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
 	co = checkout
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%= '<%' %>an<%= '>' %>%Creset' --abbrev-commit --
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+  interactive = auto
+  ui = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	editor = vim
@@ -17,4 +23,7 @@
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
 	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
-	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+[credential]
+	helper = osxkeychain
+[push]
+	default = current
