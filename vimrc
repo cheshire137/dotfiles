@@ -9,10 +9,17 @@ set backspace=indent,eol,start
 
 set nobackup
 set nowritebackup
+set smartindent
+set smarttab
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
+set showmatch " Makes cursor briefly jump to brace/parenthesis/bracket's match
+set showmode " Show the current editing mode at all times
 set incsearch		" do incremental searching
+set visualbell
+set nostartofline  " Don't jump to the first char. when paging
+set ttyfast " We have a fast terminal connection
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -42,6 +49,10 @@ if has("autocmd")
   " Set File type to 'text' for files ending in .txt
   autocmd BufNewFile,BufRead *.txt setfiletype text
 
+  autocmd FileType make set noexpandtab
+  autocmd BufRead,BufNewFile *.c,*.conf,*.h,Makefile*,*.txt set noexpandtab
+  autocmd BufRead,BufNewFile *.js let javaScript_fold=1
+
   " Enable soft-wrapping for text files
   autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
 
@@ -51,6 +62,7 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 78 characters.
   " autocmd FileType text setlocal textwidth=78
+  autocmd FileType text setlocal textwidth=80
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -94,21 +106,21 @@ let mapleader = ","
 map <Leader>R :e doc/README_FOR_APP<CR>
 
 " Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
+map <Leader>m :Rmodel
+map <Leader>c :Rcontroller
+map <Leader>v :Rview
+map <Leader>u :Runittest
+map <Leader>f :Rfunctionaltest
+map <Leader>tm :RTmodel
+map <Leader>tc :RTcontroller
+map <Leader>tv :RTview
+map <Leader>tu :RTunittest
+map <Leader>tf :RTfunctionaltest
+map <Leader>sm :RSmodel
+map <Leader>sc :RScontroller
+map <Leader>sv :RSview
+map <Leader>su :RSunittest
+map <Leader>sf :RSfunctionaltest
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -166,6 +178,7 @@ endif
 
 " Color scheme
 " colorscheme vividchalk
+colorscheme inkpot
 " highlight NonText guibg=#060606
 " highlight Folded  guibg=#0A0A0A guifg=#9090D0
 

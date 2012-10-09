@@ -21,18 +21,21 @@ unsetopt correct_all
 
 # a few aliases I like
 alias gs='git status'
-alias gd='git diff'
+alias gd='git diff | mvim -'
 alias tlog='tail -f log/development.log'
 alias ss='svn status'
 alias si='svn info'
 alias sci='svn ci'
 alias sup='svn up'
 alias sm='svn merge'
-alias sshsu='ssh jonathan@spectr.us'
 alias set-active='unlink ~/code/active &> /dev/null; ln -s $PWD ~/code/active'
 alias whatsmyip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 
 #alias ff='find ~/ -type f -name '
 
 # add plugin's bin directory to path
-export PATH="$(dirname $0)/bin:/usr/local/mysql/bin:$HOME/.rvm/bin:$PATH"
+export PATH="$(dirname $0)/bin:/usr/local/mysql/bin:$PATH"
+
+export RAILS_ENV='development'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
