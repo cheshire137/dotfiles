@@ -14,3 +14,6 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias fs='foreman start -f Procfile.puma'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

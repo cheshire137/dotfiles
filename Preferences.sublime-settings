@@ -1,0 +1,21 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"defaultLineEnding": "unix",
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 15.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"preview_on_click": false,
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true,
+	"wrap_width": 81
+}
