@@ -8,7 +8,7 @@ plugins=(git brew gem svn jgrowl)
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 
-export PATH="/Users/sarah/bin:/usr/local/bin:$PATH"
+export PATH="/Users/sarah/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export CR_APP_NAME=civchoice
 
 source $ZSH/oh-my-zsh.sh
