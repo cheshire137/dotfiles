@@ -5,6 +5,9 @@ DISABLE_LS_COLORS="false"
 
 plugins=(git brew gem svn jgrowl)
 
+# Set architecture flags
+export ARCHFLAGS="-arch x86_64"
+
 export PATH="/Users/sarah/bin:/usr/local/bin:$PATH"
 export CR_APP_NAME=civchoice
 
