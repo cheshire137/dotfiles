@@ -1,8 +1,11 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/LastNight.tmTheme",
 	"defaultLineEnding": "unix",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 15.0,
+	"font_face": "Anonymous Pro",
+	"font_size": 17.0,
+	"line_padding_bottom": 1,
+  "line_padding_top": 1,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -17,5 +20,8 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
-	"wrap_width": 81
+	"wrap_width": 81,
+	"caret_style": "phase",
+	"highlight_line": true,
+	"fade_fold_buttons": false
 }
