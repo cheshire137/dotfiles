@@ -3,7 +3,7 @@ ZSH_THEME="moneypenny"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="false"
 
-plugins=(git brew gem svn jgrowl)
+plugins=(git brew gem svn jgrowl depot_tools)
 
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
