@@ -1,15 +1,20 @@
 {
-	"color_scheme": "Packages/Dayle Rees Color Schemes/LastNight.tmTheme",
+	"caret_style": "phase",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/legacy/LastNight.tmTheme",
 	"defaultLineEnding": "unix",
 	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
 	"font_face": "Anonymous Pro",
-	"font_size": 17.0,
-	"line_padding_bottom": 1,
-  "line_padding_top": 1,
+	"font_size": 18.0,
+	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "node_modules"],
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"preview_on_click": false,
 	"rulers":
 	[
@@ -20,8 +25,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
-	"wrap_width": 81,
-	"caret_style": "phase",
-	"highlight_line": true,
-	"fade_fold_buttons": false
+	"wrap_width": 81
 }
