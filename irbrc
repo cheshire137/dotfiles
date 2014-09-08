@@ -19,7 +19,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
@@ -50,3 +50,7 @@ end
 def paste
   `pbpaste`
 end
+
+$LOAD_PATH << File.join(ENV['GEM_HOME'], 'gems', 'awesome_print-1.2.0', 'lib')
+require 'awesome_print'
+AwesomePrint.irb!
