@@ -9,15 +9,21 @@ plugins=(git brew gem svn jgrowl depot_tools)
 export ARCHFLAGS="-arch x86_64"
 
 export PATH="/Users/sarah/bin:/usr/local/bin:/usr/local/share/python:$PATH"
+export JAVA_HOME=`/usr/libexec/java_home`
 export PYTHONPATH="/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:$PYTHONPATH"
 export CR_APP_NAME=civchoice
+export ERL_LIBS=$HOME/local/erlang
 
 source $ZSH/oh-my-zsh.sh
 
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-alias fs='foreman start -f Procfile.puma'
+alias fs='foreman start'
+alias be='bundle exec'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+eval $(ssh-agent)
+ssh-add ~/.ssh/cirrus_mio_rsa
