@@ -1,25 +1,56 @@
 {
+	"auto_indent": true,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
+	],
 	"caret_style": "phase",
+	"close_windows_when_empty": true,
 	"color_scheme": "Packages/Dayle Rees Color Schemes/legacy/LastNight.tmTheme",
 	"defaultLineEnding": "unix",
+	"detect_indentation": true,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".sass-cache",
+		".tmp"
+	],
 	"font_face": "Anonymous Pro",
 	"font_size": 18.0,
-	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
-	"folder_exclude_patterns": [".svn", ".git", ".hg", "node_modules"],
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Stylus"
 	],
+	"indent_to_bracket": true,
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"preview_on_click": false,
+	"remember_open_files": true,
 	"rulers":
 	[
 		80
 	],
+	"show_tab_close_buttons": false,
+	"smart_indent": true,
 	"tab_size": 2,
 	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
