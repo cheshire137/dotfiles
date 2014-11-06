@@ -35,4 +35,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 eval $(ssh-agent)
 ssh-add ~/.ssh/cirrus_mio_rsa
 
+# git://github.com/zsh-users/zsh-syntax-highlighting.git
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
