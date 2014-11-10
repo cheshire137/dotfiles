@@ -17,11 +17,12 @@ export ARCHFLAGS="-arch x86_64"
 
 export JAVA_HOME=`/usr/libexec/java_home`
 export EC2_HOME="/Users/sarah/Documents/ec2-api-tools-1.6.12.2"
-export PATH="/Users/sarah/bin:/usr/local/bin:/usr/local/sbin:$EC2_HOME/bin:$PATH"
 export PYTHONPATH="/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:$PYTHONPATH"
 export CR_APP_NAME=civchoice
 export ERL_LIBS=$HOME/local/erlang
 export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.3
+export M2=$M2_HOME/bin
+export PATH="/Users/sarah/bin:/usr/local/bin:/usr/local/sbin:$M2:$EC2_HOME/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
