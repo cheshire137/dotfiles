@@ -21,6 +21,7 @@ export PATH="/Users/sarah/bin:/usr/local/bin:/usr/local/sbin:$EC2_HOME/bin:$PATH
 export PYTHONPATH="/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:$PYTHONPATH"
 export CR_APP_NAME=civchoice
 export ERL_LIBS=$HOME/local/erlang
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.3
 
 source $ZSH/oh-my-zsh.sh
 
