@@ -30,6 +30,7 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias fs='foreman start'
+alias cat='lolcat'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -39,3 +40,5 @@ ssh-add ~/.ssh/cirrus_mio_rsa
 
 # git://github.com/zsh-users/zsh-syntax-highlighting.git
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+fortune | cowsay | lolcat
