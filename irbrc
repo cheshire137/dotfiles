@@ -1,13 +1,15 @@
 #!/usr/bin/ruby
+# vim:filetype=ruby
 require 'irb/completion'
 require 'irb/ext/save-history'
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
-
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-%w[rubygems looksee/shortcuts wirble].each do |gem|
+$LOAD_PATH << File.join(ENV['GEM_HOME'], 'gems', 'awesome_print-1.2.0', 'lib')
+
+%w[rubygems looksee/shortcuts wirble awesome_print].each do |gem|
   begin
     require gem
   rescue LoadError
@@ -16,7 +18,7 @@ end
 
 class Object
   # list methods which aren't in superclass
-  def local_methods(obj = self)
+  def local_methods obj=self
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
 
@@ -26,7 +28,7 @@ class Object
   #   Array.ri
   #   Array.ri :pop
   #   arr.ri :pop
-  def ri(method = nil)
+  def ri method=nil
     unless method && method =~ /^[A-Z]/ # if class isn't specified
       klass = self.kind_of?(Class) ? name : self.class.name
       method = [klass, method].compact.join('#')
@@ -35,8 +37,8 @@ class Object
   end
 end
 
-def copy(str)
-  IO.popen('pbcopy', 'w') { |f| f << str.to_s }
+def copy str
+  IO.popen('pbcopy', 'w') {|f| f << str.to_s }
 end
 
 def copy_history
@@ -51,6 +53,4 @@ def paste
   `pbpaste`
 end
 
-$LOAD_PATH << File.join(ENV['GEM_HOME'], 'gems', 'awesome_print-1.2.0', 'lib')
-require 'awesome_print'
 AwesomePrint.irb!
