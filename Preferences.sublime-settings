@@ -47,7 +47,7 @@
 	"remember_open_files": true,
 	"rulers":
 	[
-		80
+		90
 	],
 	"show_tab_close_buttons": false,
 	"smart_indent": true,
@@ -56,5 +56,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
-	"wrap_width": 81
+	"wrap_width": 91
 }

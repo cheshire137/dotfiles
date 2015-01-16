@@ -1,5 +1,5 @@
 [
-	{ "keys": ["home"], "command": "move_to", "args": {"to": "bol"} },
+  { "keys": ["home"], "command": "move_to", "args": {"to": "bol"} },
   { "keys": ["end"], "command": "move_to", "args": {"to": "eol"} },
   { "keys": ["command+shift+r"], "command": "reindent" , "args": {"single_line": false}},
   { "keys": ["super+ctrl+m"], "command": "list_rails_models" },
@@ -13,6 +13,20 @@
   { "keys": ["super+ctrl+g"],  "command": "gemfile_navigation"},
   { "keys": ["super+ctrl+r"],  "command": "rakefile_navigation"},
   { "keys": ["super+shift+w"], "command": "close_all" },
+  { "keys": ["super+alt+h"], "command": "hash_syntax" },
+  {
+      "keys": ["ctrl+alt+super+'"],
+      "command": "bh_key",
+      "args":
+      {
+          "lines" : true,
+          "plugin":
+          {
+              "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
+              "command": "bh_modules.swapquotes"
+          }
+      }
+  },
   {
     "keys": ["super+ctrl+left"],
     "command": "set_layout",
@@ -57,6 +71,7 @@
      "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
     }
   },
+  { "keys": ["super+m"], "command": "markdown_preview", "args": {"target": "browser", "parser": "github"} },
   { "keys": ["ctrl+shift+left"], "command": "move_to_group", "args": { "group": 0 } },
   { "keys": ["ctrl+shift+right"], "command": "move_to_group", "args": { "group": 1 } }
 ]
