@@ -10,7 +10,7 @@ ZSH_THEME="moneypenny"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="false"
 
-plugins=(git brew gem github osx vagrant jgrowl depot_tools npm aws bower bundler cap)
+plugins=(git brew gem github osx vagrant jgrowl npm aws bower bundler cap)
 
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
