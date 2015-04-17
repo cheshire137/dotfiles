@@ -33,12 +33,12 @@
 		".tmp"
 	],
 	"font_face": "Anonymous Pro",
-	"font_size": 18.0,
+	"font_size": 19.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Stylus"
+		"Stylus",
+		"Vintage"
 	],
 	"indent_to_bracket": true,
 	"line_padding_bottom": 1,
@@ -47,12 +47,17 @@
 	"remember_open_files": true,
 	"rulers":
 	[
+		80,
 		90
 	],
 	"show_tab_close_buttons": false,
+	"sidebar_size_12": true,
 	"smart_indent": true,
+	"status_bar_brighter": true,
 	"tab_size": 2,
-	"theme": "Soda Dark.sublime-theme",
+	"tabs_padding_small": true,
+	"tabs_small": true,
+	"theme": "Afterglow.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
