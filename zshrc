@@ -30,6 +30,8 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias fs='foreman start'
+alias chase_git='git config user.name "Chase Southard"; git config user.email "chase.southard@gmail.com"'
+alias sarah_git='git config user.name "Sarah Vessels"; git config user.email "cheshire137@gmail.com"'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
