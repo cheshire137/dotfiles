@@ -8,6 +8,11 @@ function git_user_initials {
   echo "$ZSH_THEME_GIT_USER_PROMPT_PREFIX$(git config --get user.name | sed 's/[a-z]//g' | sed -e 's/[ \t][ \t]*//g')$ZSH_THEME_GIT_USER_PROMPT_SUFFIX"
 }
 
+function dockerclean {
+  docker ps -a -a --filter="state=exited" | xargs docker rm
+  docker images -q --filter="dangling=true" | xargs docker rmi
+}
+
 #/usr/bin/login -f sarah
 
 ZSH=$HOME/.oh-my-zsh
@@ -34,15 +39,19 @@ source $ZSH/oh-my-zsh.sh
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-alias fs='foreman start'
 alias chase_git='git config user.name "Chase Southard"; git config user.email "chase.southard@gmail.com"'
 alias sarah_git='git config user.name "Sarah Vessels"; git config user.email "cheshire137@gmail.com"'
+alias reset_docker="docker-compose kill; docker-compose rm --force"
+alias dcr="docker-compose run --rm"
+alias dcreboot="docker-compose stop && docker-compose rm -f && if [ -f dev-in-docker.sh ]; then ./dev-in-docker.sh; fi"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 eval $(ssh-agent)
 ssh-add ~/.ssh/cirrus_mio_rsa
+
+eval "$(docker-machine env default --shell=bash)"
 
 # git://github.com/zsh-users/zsh-syntax-highlighting.git
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
