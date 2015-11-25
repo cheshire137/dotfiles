@@ -8,3 +8,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" $fg_bold[red]✗%{$reset_color%}"
 
 ZSH_THEME_GIT_USER_PROMPT_PREFIX="[$fg_bold[blue]"
 ZSH_THEME_GIT_USER_PROMPT_SUFFIX="$reset_color]"
+
+ZSH_THEME_RVM_PROMPT_PREFIX=" [%{$fg[blue]%}rvm%{$reset_color%}:%{$fg[red]%}"
+ZSH_THEME_RVM_PROMPT_SUFFIX="%{$reset_color%}]"
