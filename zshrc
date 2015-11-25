@@ -17,7 +17,7 @@ function git_user_initials {
 }
 
 function dockerclean {
-  docker ps -a -a --filter="state=exited" | xargs docker rm
+  docker ps -a --filter="state=exited" | xargs docker rm
   docker images -q --filter="dangling=true" | xargs docker rmi
 }
 
@@ -47,8 +47,6 @@ source $ZSH/oh-my-zsh.sh
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-alias chase_git='git config user.name "Chase Southard"; git config user.email "chase.southard@gmail.com"'
-alias sarah_git='git config user.name "Sarah Vessels"; git config user.email "cheshire137@gmail.com"'
 alias reset_docker="docker-compose kill; docker-compose rm --force"
 alias dcr="docker-compose run --rm"
 alias dcreboot="docker-compose stop && docker-compose rm -f && if [ -f dev-in-docker.sh ]; then ./dev-in-docker.sh; fi"
