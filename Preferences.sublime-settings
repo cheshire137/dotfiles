@@ -18,7 +18,7 @@
 	],
 	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Theme - Afterglow/Afterglow-twilight.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/legacy/LastNight.tmTheme",
 	"defaultLineEnding": "unix",
 	"detect_indentation": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -33,10 +33,11 @@
 		".tmp"
 	],
 	"font_face": "Anonymous Pro",
-	"font_size": 19.0,
+	"font_size": 20.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Markdown",
 		"Stylus",
 		"Vintage"
 	],
@@ -47,8 +48,7 @@
 	"remember_open_files": true,
 	"rulers":
 	[
-		80,
-		90
+		80
 	],
 	"show_tab_close_buttons": false,
 	"sidebar_size_12": true,
@@ -61,5 +61,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
-	"wrap_width": 91
+	"wrap_width": 81
 }
