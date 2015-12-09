@@ -45,9 +45,6 @@ alias reset_docker="docker-compose kill; docker-compose rm --force"
 alias dcr="docker-compose run --rm"
 alias dcreboot="docker-compose stop && docker-compose rm -f && if [ -f dev-in-docker.sh ]; then ./dev-in-docker.sh; fi"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 eval $(ssh-agent)
 ssh-add ~/.ssh/id_rsa
 
