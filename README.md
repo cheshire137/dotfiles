@@ -6,8 +6,10 @@ These are config files to set up a system the way I like it. It uses [Oh My ZSH]
 
 Run the following commands in your terminal. It will prompt you before it does anything destructive.
 
+[Download inkpot.vim](http://www.vim.org/scripts/script.php?script_id=1143) and put it in ~/.vim/colors. Create those directories if they don't exist.
+
 ```terminal
-git clone https://github.com/moneypenny/dotfiles.git ~/.dotfiles
+git clone https://github.com/cheshire137/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 rake install
 ```
