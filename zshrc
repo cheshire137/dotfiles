@@ -28,13 +28,14 @@ ZSH_THEME="moneypenny"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="false"
 
-plugins=(git brew gem github osx vagrant jgrowl npm aws bower bundler cap)
+# git://github.com/zsh-users/zsh-syntax-highlighting.git
+plugins=(git brew gem github osx vagrant jgrowl npm aws bower bundler cap zsh-syntax-highlighting)
 
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 
 export JAVA_HOME=`/usr/libexec/java_home`
-export PATH="/Users/sarah/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="~/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,8 +50,5 @@ eval $(ssh-agent)
 ssh-add ~/.ssh/id_rsa
 
 eval "$(docker-machine env default --shell=bash)"
-
-# git://github.com/zsh-users/zsh-syntax-highlighting.git
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 fortune | cowsay | lolcat
