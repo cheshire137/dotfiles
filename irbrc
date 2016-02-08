@@ -7,7 +7,7 @@ IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-$LOAD_PATH << File.join(ENV['GEM_HOME'], 'gems', 'awesome_print-1.2.0', 'lib')
+#$LOAD_PATH << File.join(ENV['GEM_HOME'], 'gems', 'awesome_print-1.2.0', 'lib')
 
 %w[rubygems looksee/shortcuts wirble awesome_print].each do |gem|
   begin
@@ -53,4 +53,4 @@ def paste
   `pbpaste`
 end
 
-AwesomePrint.irb!
+#AwesomePrint.irb!
