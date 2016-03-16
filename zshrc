@@ -35,7 +35,7 @@ plugins=(git brew gem github osx vagrant jgrowl npm aws bower bundler cap zsh-sy
 export ARCHFLAGS="-arch x86_64"
 
 export JAVA_HOME=`/usr/libexec/java_home`
-export PATH="~/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="bin:~/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
