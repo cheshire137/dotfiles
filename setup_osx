@@ -1,0 +1,76 @@
+# vim:ft=sh
+COMPUTER_NAME="wonderland"
+
+if [[ ${COMPUTER_NAME} != $(sudo scutil --get ComputerName) ]]; then
+  echo "Set computer name to '${COMPUTER_NAME}' (as done via System Preferences → Sharing)"
+  sudo scutil --set ComputerName "${COMPUTER_NAME}"
+  sudo scutil --set HostName "${COMPUTER_NAME}"
+  sudo scutil --set LocalHostName "${COMPUTER_NAME}"
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${COMPUTER_NAME}"
+fi
+
+echo "Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)"
+defaults write com.apple.screencapture type -string "png"
+
+echo "Disable shadow in screenshots"
+defaults write com.apple.screencapture disable-shadow -bool true
+
+echo "Require password immediately after sleep or screen saver begins"
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+echo "Save screenshots to Pictures/Screenshots in dir for current year"
+mkdir -p "${HOME}/Pictures/Screenshots/`date +\"%Y\"`"
+defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots/`date +\"%Y\"`"
+
+echo "Automatically hide and show the Dock"
+defaults write com.apple.dock autohide -bool true
+
+echo "Bottom right screen corner → Start screen saver"
+defaults write com.apple.dock wvous-br-corner -int 5
+defaults write com.apple.dock wvous-br-modifier -int 0
+
+echo "Top right screen corner → Desktop"
+defaults write com.apple.dock wvous-tr-corner -int 4
+defaults write com.apple.dock wvous-tr-modifier -int 0
+
+echo "Top left screen corner → Disabled"
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tl-modifier -int 0
+
+echo "Bottom left screen corner → Disabled"
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-bl-modifier -int 0
+
+echo "Enable full keyboard access for all controls"
+# (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+echo "Trackpad: enable tap to click for this user and for the login screen"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+echo "Set Home as the default location for new Finder windows"
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+echo "Finder: show all filename extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+echo "When performing a search, search the current folder by default"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+echo "Disable the warning when changing a file extension"
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+echo "Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+echo "Automatically open a new Finder window when a volume is mounted"
+defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+echo "Disable the warning before emptying the Trash"
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
