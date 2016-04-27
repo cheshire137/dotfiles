@@ -1,77 +1,9 @@
 [
   { "keys": ["home"], "command": "move_to", "args": {"to": "bol"} },
   { "keys": ["end"], "command": "move_to", "args": {"to": "eol"} },
-  { "keys": ["command+shift+r"], "command": "reindent" , "args": {"single_line": false}},
-  { "keys": ["super+ctrl+m"], "command": "list_rails_models" },
-  { "keys": ["super+ctrl+c"], "command": "list_rails_controllers" },
-  { "keys": ["super+ctrl+v"], "command": "list_rails_views" },
-  { "keys": ["super+ctrl+h"], "command": "list_rails_helpers" },
-  { "keys": ["super+ctrl+x"], "command": "list_rails_fixtures" },
-  { "keys": ["super+ctrl+t"], "command": "list_rails_tests" },
-  { "keys": ["super+ctrl+i"], "command": "list_rails_javascripts" },
-  { "keys": ["super+ctrl+y"], "command": "list_rails_stylesheets" },
-  { "keys": ["super+ctrl+g"],  "command": "gemfile_navigation"},
-  { "keys": ["super+ctrl+r"],  "command": "rakefile_navigation"},
-  { "keys": ["super+shift+w"], "command": "close_all" },
-  { "keys": ["super+alt+h"], "command": "hash_syntax" },
-  {
-      "keys": ["ctrl+alt+super+'"],
-      "command": "bh_key",
-      "args":
-      {
-          "lines" : true,
-          "plugin":
-          {
-              "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
-              "command": "bh_modules.swapquotes"
-          }
-      }
-  },
-  {
-    "keys": ["super+ctrl+left"],
-    "command": "set_layout",
-    "caption": "Two Columns: Skinny Left, Fat Right",
-    "args":
-    {
-      "cols": [0.0, 0.33, 1.0],
-      "rows": [0.0, 1.0],
-      "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
-    }
-  },
-  {
-    "keys": ["super+ctrl+right"],
-    "command": "set_layout",
-    "caption": "Two Columns: Fat Left, Skinny Right",
-    "args":
-    {
-      "cols": [0.0, 0.66, 1.0],
-      "rows": [0.0, 1.0],
-      "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
-    }
-  },
-  {
-    "keys": ["super+ctrl+up"],
-    "command": "set_layout",
-    "caption": "Two Equal Columns",
-    "args":
-    {
-      "cols": [0.0, 0.5, 1.0],
-      "rows": [0.0, 1.0],
-      "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
-    }
-  },
-  {
-    "keys": ["super+ctrl+down"],
-    "command": "set_layout",
-    "caption": "Two Rows",
-    "args":
-    {
-     "cols": [0.0, 1.0],
-     "rows": [0.0, 0.75, 1.0],
-     "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
-    }
-  },
-  { "keys": ["super+m"], "command": "markdown_preview", "args": {"target": "browser", "parser": "github"} },
-  { "keys": ["ctrl+shift+left"], "command": "move_to_group", "args": { "group": 0 } },
-  { "keys": ["ctrl+shift+right"], "command": "move_to_group", "args": { "group": 1 } }
+  { "keys": ["super+\\"], "command": "toggle_side_bar" },
+  { "keys": ["super+shift+\\"], "command": "reveal_in_side_bar"},
+  { "keys": ["super+shift+w"], "command": "close_others" },
+  { "keys": ["super+alt+r"], "command": "goto_definition" },
+  { "keys": ["super+v"], "command": "paste", "args": { "indent": true } },
 ]
