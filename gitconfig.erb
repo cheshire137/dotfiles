@@ -12,6 +12,7 @@
   # deletes local branches that have been merged to master
   cleanup = !git branch --merged master | grep -v 'master$' | xargs git branch -d
   updatefrommaster = !git checkout master && git pull && git checkout - && git merge master
+  switchto = !sh -c 'git checkout $1 && git pull' -
 [color]
 	diff = auto
 	status = auto
