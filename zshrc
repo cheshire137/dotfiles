@@ -54,3 +54,5 @@ ssh-add ~/.ssh/id_rsa
 #eval "$(docker-machine env default --shell=bash)"
 
 fortune | cowsay | lolcat
+# added by travis gem
+[ -f /Users/cheshire137/.travis/travis.sh ] && source /Users/cheshire137/.travis/travis.sh
