@@ -6,4 +6,5 @@
   { "keys": ["super+shift+w"], "command": "close_others" },
   { "keys": ["super+alt+r"], "command": "goto_definition" },
   { "keys": ["super+v"], "command": "paste", "args": { "indent": true } },
+  { "keys": ["ctrl+shift+c"], "command": "copy_path" }
 ]
