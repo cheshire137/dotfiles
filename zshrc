@@ -21,6 +21,11 @@ function dockerclean {
   docker images -q --filter="dangling=true" | xargs docker rmi
 }
 
+# thanks @probablycorey -- https://gist.github.com/probablycorey/f8dac19d3757da4579f03fc7f6327377
+function woman() {
+  man -t $1 | open -f -a /Applications/Preview.app
+}
+
 #/usr/bin/login -f sarah
 
 ZSH=$HOME/.oh-my-zsh
