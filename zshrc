@@ -52,6 +52,8 @@ alias shay_git='git config user.name "Shay Frendt"; git config user.email "shay.
 alias sarah_git='git config user.name "Sarah Vessels"; git config user.email "cheshire137@gmail.com"'
 
 alias rdm='bin/rake db:migrate db:test:prepare'
+
+alias dcemptytrash='docker rm $(docker ps -q -f status=exited)'
 alias reset_docker="docker-compose kill; docker-compose rm --force"
 alias dcr="docker-compose run --rm"
 alias dcreboot="docker-compose stop && docker-compose rm -f && if [ -f dev-in-docker.sh ]; then ./dev-in-docker.sh; fi"
