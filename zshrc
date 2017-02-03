@@ -66,5 +66,9 @@ eval "$(nodenv init -)"
 #eval "$(docker-machine env default --shell=bash)"
 
 fortune | cowsay | lolcat
+
+# tabtab source for yo package
+# uninstall by removing these lines or running `tabtab uninstall yo`
+[[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 # added by travis gem
 [ -f /Users/cheshire137/.travis/travis.sh ] && source /Users/cheshire137/.travis/travis.sh
