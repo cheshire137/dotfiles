@@ -43,7 +43,7 @@ export ARCHFLAGS="-arch x86_64"
 
 export GOPATH="$HOME/code/go/"
 export JAVA_HOME=`/usr/libexec/java_home`
-export PATH="/Users/cheshire137/bin:$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.6/bin:$HOME/bin:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
