@@ -35,6 +35,7 @@ DISABLE_LS_COLORS="false"
 
 # git://github.com/zsh-users/zsh-syntax-highlighting.git
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
+# zstyle :omz:plugins:ssh-agent identities id_rsa
 # plugins=(git brew gem github osx jgrowl npm bundler ssh-agent zsh-syntax-highlighting)
 plugins=(git brew gem github osx jgrowl npm bundler zsh-syntax-highlighting)
 
