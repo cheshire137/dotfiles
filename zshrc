@@ -58,7 +58,7 @@ alias reset_docker="docker-compose kill; docker-compose rm --force"
 alias dcr="docker-compose run --rm"
 alias dcreboot="docker-compose stop && docker-compose rm -f && if [ -f dev-in-docker.sh ]; then ./dev-in-docker.sh; fi"
 
-eval $(ssh-agent)
+# eval $(ssh-agent)
 ssh-add ~/.ssh/id_rsa
 
 eval "$(nodenv init -)"
