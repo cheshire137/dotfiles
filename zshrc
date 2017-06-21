@@ -39,7 +39,7 @@ plugins=(git brew gem github osx vagrant jgrowl npm aws bower bundler cap zsh-sy
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 
-export GOPATH=/Users/cheshire137/code/go/
+export GOPATH="$HOME/code/go/"
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH="/Users/cheshire137/bin:$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
 
