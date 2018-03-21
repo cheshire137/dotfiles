@@ -58,9 +58,6 @@ source $ZSH/oh-my-zsh.sh
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-alias shay_git='git config user.name "Shay Frendt"; git config user.email "shay.frendt@gmail.com"'
-alias sarah_git='git config user.name "Sarah Vessels"; git config user.email "cheshire137@gmail.com"'
-
 alias rdm='bin/rake db:migrate db:test:prepare'
 alias gitt='git'
 
