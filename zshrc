@@ -26,6 +26,13 @@ function woman() {
   man -t $1 | open -f -a /Applications/Preview.app
 }
 
+# thanks @d12
+function notify {
+  title=${1:-"🎉   Finished! 🎉  "}
+  msg=${2:-"Your command is finished!"}
+  osascript -e "display notification \"$msg\" with title \"$title\" sound name \"Default\""
+}
+
 #/usr/bin/login -f sarah
 
 ZSH=$HOME/.oh-my-zsh
