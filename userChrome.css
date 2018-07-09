@@ -1,0 +1,29 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* In macOS, put this file in /Users/[your-user]/Library/Thunderbird/Profiles/[your-Thunderbird-profile]/chrome/userChrome.css */
+
+/* List of folders on the left */
+#folderTree > treechildren {
+  font-size: 15px !important;
+}
+#folderTree > treechildren::-moz-tree-row {
+  height: 24px !important;
+}
+
+/* Lists of messages in the center */
+#threadTree > treechildren {
+  font-size: 16px;
+}
+#threadTree > treechildren::-moz-tree-row {
+  height: 25px !important;
+}
+
+/* header at the top of the message content */
+#msgHeaderView {
+  font-size: 14px !important;
+}
+
+toolbarbutton > .toolbarbutton-icon {
+  width: 12px;
+  height: 12px;
+}
