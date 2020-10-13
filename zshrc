@@ -58,6 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+alias git='/usr/local/bin/git'
 alias rdm='bin/rake db:migrate db:test:prepare'
 alias gitt='git'
 
