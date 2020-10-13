@@ -59,6 +59,7 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias git='/usr/local/bin/git'
+alias gco='git checkout'
 alias rdm='bin/rake db:migrate db:test:prepare'
 alias gitt='git'
 alias ctags="`brew --prefix`/bin/ctags"
