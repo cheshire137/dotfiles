@@ -44,7 +44,7 @@ DISABLE_LS_COLORS="false"
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
 # zstyle :omz:plugins:ssh-agent identities id_rsa
 # plugins=(git brew gem github osx jgrowl npm bundler ssh-agent zsh-syntax-highlighting)
-plugins=(git brew gem github osx jgrowl npm bundler zsh-syntax-highlighting)
+plugins=(git brew github osx jgrowl npm zsh-syntax-highlighting)
 
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
