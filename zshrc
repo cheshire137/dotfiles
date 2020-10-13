@@ -61,6 +61,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 alias git='/usr/local/bin/git'
 alias rdm='bin/rake db:migrate db:test:prepare'
 alias gitt='git'
+alias ctags="`brew --prefix`/bin/ctags"
 
 alias dcemptytrash='docker rm $(docker ps -q -f status=exited)'
 alias reset_docker="docker-compose kill; docker-compose rm --force"
