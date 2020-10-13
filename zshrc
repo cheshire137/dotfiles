@@ -77,7 +77,7 @@ eval "$(nodenv init -)"
 
 #eval "$(docker-machine env default --shell=bash)"
 
-fortune | cowsay | lolcat
+fortune | cowsay
 
 # tabtab source for yo package
 # uninstall by removing these lines or running `tabtab uninstall yo`
