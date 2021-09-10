@@ -109,4 +109,6 @@
     "githubIssues.issueCompletions.enabled": false,
     "html.format.wrapLineLength": 118,
     "editor.wordWrapColumn": 118,
+    "files.trimTrailingWhitespace": true,
+    "editor.bracketPairColorization.enabled": true,
 }
