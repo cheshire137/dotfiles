@@ -7,9 +7,6 @@
 	user = cheshire137
 [push]
 	default = current
-[credential]
-	helper = osxkeychain
-  helper = cache --timeout=3600
 [alias]
   co = checkout
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
