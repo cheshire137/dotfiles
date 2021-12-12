@@ -1,6 +1,8 @@
 [user]
 	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+[fetch]
+	prune = true
 [alias]
 	co = checkout
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
@@ -24,7 +26,7 @@
   interactive = auto
   ui = auto
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 	autocrlf = input
 [apply]

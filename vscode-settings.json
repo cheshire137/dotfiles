@@ -1,0 +1,114 @@
+{
+    "workbench.colorTheme": "Github Light Theme - Gray",
+    "window.closeWhenEmpty": true,
+    "editor.detectIndentation": true,
+    "editor.showFoldingControls": "always",
+    "editor.fontSize": 16,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.tabCloseButton": "off",
+    "editor.tabSize": 2,
+    "editor.wordSeparators": "./\\()\"'-,.;<>~!@#$%^&*|+=[]{}`~?",
+    "editor.wordWrap": "on",
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    // Controls whether suggestions should automatically show up while typing.
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "files.associations": {
+        "*.erb": "erb"
+    },
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "explorer.confirmDelete": false,
+    "go.useLanguageServer": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "extensions.ignoreRecommendations": false,
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontFamily": "Rec Mono Affine, Hack, Iosevka Term, SF Mono, Anonymous Pro, Cascadia Mono, Cascadia Code, Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.minimumContrastRatio": 4.5,
+    "debug.console.fontSize": 14,
+    "search.followSymlinks": false,
+    "ruby.format": "rubocop",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.useLanguageServer": true,
+    "ruby.lint": {
+        "rubocop": {
+            "command": "bin/rubocop"
+        }
+    },
+    "solargraph.commandPath": "/Users/cheshire137/.rbenv/shims/solargraph",
+    "solargraph.checkGemVersion": false,
+    "solargraph.diagnostics": true,
+    "solargraph.hover": false,
+    "emmet.includeLanguages": {
+        "html.erb": "html",
+        "erb": "html"
+    },
+    "emmet.showSuggestionsAsSnippets": true,
+    "terminal.integrated.fontFamily": "Anonymous Pro, Rec Mono Affine, Iosevka Term, SF Mono, Cascadia Mono, Cascadia Code, Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "window.zoomLevel": 1,
+    "editor.rulers": [
+        118
+    ],
+    "git.autofetch": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "copilot.enabled": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    },
+    "oneDarkPro.vivid": false,
+    "github.copilot.autocomplete.enable": true,
+    "editor.inlineSuggest.enabled": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "html.format.endWithNewline": true,
+    "workbench.sideBar.location": "right",
+    "githubPullRequests.queries": [
+
+
+        {
+            "label": "Waiting for my review",
+            "query": "is:open review-requested:${user} draft:false"
+        },
+        {
+            "label": "Assigned to me",
+            "query": "is:open assignee:${user} -author:hubot sort:updated-desc archived:false -user:${user}"
+        },
+        {
+            "label": "Created by me",
+            "query": "is:open author:${user} sort:updated-desc archived:false -user:${user}"
+        }
+    ],
+    "githubIssues.queries": [
+
+        {
+            "label": "My Issues",
+            "query": "is:open is:issue assignee:${user} archived:false org:${owner} "
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        }
+    ],
+    "githubIssues.ignoreCompletionTrigger": [
+        "python",
+        "makefile",
+        "ruby"
+    ],
+    "githubIssues.issueCompletions.enabled": false,
+    "html.format.wrapLineLength": 118,
+    "editor.wordWrapColumn": 118,
+    "files.trimTrailingWhitespace": true,
+    "editor.bracketPairColorization.enabled": true,
+}
