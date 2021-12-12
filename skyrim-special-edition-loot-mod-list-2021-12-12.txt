@@ -1,0 +1,2126 @@
+[spoiler][code]{
+    "messages": [
+        {
+            "condition": "",
+            "language": "en",
+            "text": "[Latest LOOT thread](https://loot.github.io/latest-thread/).",
+            "type": "say"
+        },
+        {
+            "condition": "product_version(\"../SkyrimSE.exe\", \"1.6.323.0\", >=) and file(\"../SkyrimSE.exe\") and not file(\"SkyrimVR.esm\")",
+            "language": "en",
+            "text": "Your **Skyrim AE** is up-to-date.",
+            "type": "say"
+        },
+        {
+            "condition": "version(\"../skse64_loader.exe\", \"0.2.1.3\", >=) and file(\"../SkyrimSE.exe\") and product_version(\"../SkyrimSE.exe\", \"1.6.318.0\", >=) and not file(\"SkyrimVR.esm\") and file(\"../skse64_loader.exe\")",
+            "language": "en",
+            "text": "Your **Script Extender ([SKSE AE Preliminary](https://skse.silverlock.org))** is up-to-date.",
+            "type": "say"
+        },
+        {
+            "condition": "",
+            "language": "en",
+            "text": "You have not sorted your load order this session\\.",
+            "type": "warn"
+        }
+    ],
+    "plugins": [
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Skyrim.esm",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "DLC",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.4](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 384 ITM records, 92 deleted references and 3 deleted navmeshes. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "Update.esm",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Regions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Delev"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Change"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "DLC",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.4](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 849 ITM records, 82 deleted references and 59 deleted navmeshes. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "Dawnguard.esm",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Regions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Delev"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Relev"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "DLC",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.4](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 221 ITM records, 11 deleted references and 5 deleted navmeshes. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "HearthFires.esm",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "DLC",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.4](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 87 ITM records, 8 deleted references and 1 deleted navmesh. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "Dragonborn.esm",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Text"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Creation Club",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.4](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 3 ITM records and 4 deleted references. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "ccBGSSSE001-Fish.esm",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "NPC.DefaultOutfit"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "ObjectBounds"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Creation Club",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.4](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 1 ITM record. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "ccQDRSSE001-SurvivalMode.esl",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Text"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Creation Club",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "ccBGSSSE037-Curios.esl",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Creation Club",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.4](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 3 ITM records. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "ccBGSSSE025-AdvDSGS.esm",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Encounter"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Acoustic"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Climate"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Encounter"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.ForceHideLand"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.ImageSpace"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.LockList"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Music"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Name"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Owner"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Delev"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Names"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Relev"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Sound"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Stats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Text"
+                }
+            ],
+            "group": "Fixes & Resources",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "Unofficial Skyrim Special Edition Patch.esp",
+            "suggestedTags": [],
+            "version": "4.2.4b"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": true,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "UHDAP - MusicHQ.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Cathedral - 3D Mountain Flowers.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.3f](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 9 ITM records. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "Lanterns Of Skyrim II.esm",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "RealisticWaterTwo - Resources.esm",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Fixes & Resources",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "SkyUI_SE.esp",
+            "suggestedTags": [],
+            "version": "5.2"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Early Loaders",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "TrueStormsSE.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Sound"
+                }
+            ],
+            "version": "1.0"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Early Loaders",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "SMIM-SE-Merged-All.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "ObjectBounds"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Early Loaders",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Better Dynamic Snow SE.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.3](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 2 ITM records. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "EnhancedLightsandFX.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Climate"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.ImageSpace"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "ObjectBounds"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Stats"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "ELFX Fake Light Remover.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.3](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 1 ITM record. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "surreal lighting.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "more plants all extra.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "RichMerchantsSkyrim_x2.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Relev"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "SkyrimIsWindy.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "MorrowindImports.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "WetandCold.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "TrueStorms_Wet&Cold_Patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Wet&Cold - WaterFix - Addon.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "Relationship Dialogue Overhaul.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.ACBS"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.AIData"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.AIPackages"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.CombatStyle"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.DeathItem"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.Spells"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.Stats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Owner"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.RecordFlags"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Regions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Delev"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "NPC.Class"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Names"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Stats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Text"
+                }
+            ],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "Cutting Room Floor.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "Actors.DeathItem"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.Voice"
+                },
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "C.RecordFlags"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "EffectStats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "EnchantmentStats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Factions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "NPC.CrimeFaction"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "NPC.DefaultOutfit"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Outfits.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Outfits.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "SpellStats"
+                }
+            ],
+            "version": "3.1.9"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "CollegeOfWinterholdImmersive.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.ACBS"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.AIData"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.AIPackages"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.CombatStyle"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.Perks.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.Perks.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.Spells"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.Stats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Climate"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Encounter"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Music"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Owner"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Regions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "EnchantmentStats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Factions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "NPC.AttackRace"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "NPC.Class"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "NPC.DefaultOutfit"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Outfits.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Stats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Text"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Diversity - A Character Overhaul.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Verdant - A Skyrim Grass Plugin SSE Version.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Landscape Fixes For Grass Mods.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "It is recommended that you read this mod's [Compatibility Notes](https://www.nexusmods.com/skyrimspecialedition/mods/6289?tab=description).",
+                    "type": "say"
+                }
+            ],
+            "name": "JKs Skyrim.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Acoustic"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Owner"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.RecordFlags"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Regions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Sound"
+                }
+            ],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "SoundsofSkyrimComplete.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Acoustic"
+                },
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "C.Owner"
+                },
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "C.RecordFlags"
+                },
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "C.Regions"
+                },
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Sound"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "SoS_TrueStorms_Patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Chesko_LoreBasedLoadingScreens.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Beards.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "ELFX Fixes.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "LoS II - JKs Skyrim patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.3](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 16 ITM records and 13 deleted references. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "goodbrother.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "Hothtrooper44_ArmorCompilation.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Delev"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Outfits.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Outfits.Remove"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Relev"
+                }
+            ],
+            "version": "8"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "Hothtrooper44_Armor_Ecksstra.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "SPTConsistentOlderPeopleSE.esp",
+            "suggestedTags": [],
+            "version": "4.2"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": true,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "aMidianBorn_Book of Silence.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Simply No Fast Travel.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "dD - Enhanced Blood Main.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "icepenguinworldmapclassic.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "Dr_Bandolier.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "CWIEnLFXSEPatch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "ZIA_Complete Pack.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "EffectStats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "EnchantmentStats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Names"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Sound"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Stats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Text"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.3](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 5 ITM records. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "imp_helm_legend.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "imp_helm_Immersive_Armors.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "imp_helm_USSEP.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "CFTO.esp",
+            "suggestedTags": [],
+            "version": "2.0"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Cloaks.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Invent.Add"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Outfits.Add"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Cloaks - Dawnguard.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Outfits.Add"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Cloaks - USSEP Patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.0](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 34 ITM records. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "Inigo.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": true,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "[SSEEdit v4.0.3f](https://www.nexusmods.com/skyrimspecialedition/mods/164) found 25 ITM records. A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).",
+                    "type": "warn"
+                }
+            ],
+            "name": "LoS II - Lantern Workers.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Landscape For Grass Mods JK'S Skyrim.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Skyrim Flora Overhaul.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "LoS II - CRF patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "CFTO-JK-Patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "JKs Skyrim_Cutting Room Floor_Patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Landscape Fixes For Grass mods - Cutting Room Floor Locations.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "The Paarthurnax Dilemma.esp",
+            "suggestedTags": [],
+            "version": "2.0.1"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "CWICRFSEPatch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Landscape For Grass Mods -Immersive Citizens PATCH.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "LoS II - SMIM patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Skills & Perks",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [
+                {
+                    "condition": "",
+                    "language": "en",
+                    "text": "It is recommended that you read this mod's [Compatibility Notes](https://www.nexusmods.com/skyrimspecialedition/articles/22/).",
+                    "type": "say"
+                }
+            ],
+            "name": "Ordinator - Perks of Skyrim.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "EffectStats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Graphics"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Names"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Sound"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "SpellStats"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Text"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "CWIOrdinatorPatchSSE.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "tcbm.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Keywords"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Actors.AIPackages"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Location"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "Names"
+                }
+            ],
+            "group": "Alternate Start",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "Alternate Start - Live Another Life.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": false,
+                    "name": "Names"
+                }
+            ],
+            "version": "4.1.4"
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Landscape Fixes For Grass mods - Alternate start Locations.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Lighting Enhancers",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "ELFXEnhancer.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.ImageSpace"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "ELFXEnhancer-BrighterLivingSpaces.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "SoS_ELFX+Enhancer_Patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "elfx enhancer tweaks brighter.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                }
+            ],
+            "group": "Late Loaders",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": true,
+            "messages": [],
+            "name": "RealisticWaterTwo.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "JKs Skyrim_RWT_Patch.esp",
+            "suggestedTags": [],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "default",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "ELFX Fixes Ragged Flagon Fix.esp",
+            "suggestedTags": [
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Light"
+                },
+                {
+                    "condition": "",
+                    "isAddition": true,
+                    "name": "C.Water"
+                }
+            ],
+            "version": ""
+        },
+        {
+            "crc": 0,
+            "currentTags": [],
+            "group": "Worldspace Settings",
+            "isActive": true,
+            "isDirty": false,
+            "isEmpty": false,
+            "loadsArchive": false,
+            "messages": [],
+            "name": "Dawnguard Map Markers.esp",
+            "suggestedTags": [],
+            "version": "2.0.2"
+        }
+    ]
+}[/code][/spoiler]
