@@ -1,0 +1,332 @@
+#!/usr/bin/env ruby
+
+# Taken from https://github.com/smashwilson/dotfiles/blob/e2355d8d99edb17e7a94e373f7e99725a6f7f9f6/bin/pr-build-status
+require "optparse"
+require "json"
+require "net/http"
+
+options = {
+  wait: false,
+  verbose: false,
+  delay: 5.0,
+}
+opts = OptionParser.new do |opts|
+  opts.banner = "Usage: pr-build-status [options] owner/name#123 456 [...]"
+
+  opts.on("-t", "--token TOKEN", "GitHub API personal access token") do |token|
+    options[:token] = token
+  end
+
+  opts.on("-w", "--wait", "Poll and report incoming build statuses until all expected builds are complete") do
+    options[:wait] = true
+  end
+
+  opts.on("-v", "--verbose", "Include successful status checks") do
+    options[:verbose] = true
+  end
+
+  opts.on("-d", "--delay S", "Configure delay between queries in seconds") do |seconds|
+    options[:wait] = true
+    options[:delay] = seconds.to_f
+  end
+
+  opts.on("-h", "--help", "Display this message") do
+    puts opts
+    exit
+  end
+end
+opts.parse!
+pull_request_phrases = ARGV.dup
+
+default_repo = ENV["GITHUB_REPOSITORY"]
+default_repo_owner, default_repo_name = nil, nil
+if default_repo && default_repo =~ /\A([^\/]+)\/([^\/]+)\z/
+  default_repo_owner, default_repo_name = $1, $2
+else
+  $stderr.puts "WARNING: Unable to parse default repository owner and name from #{default_repo.inspect}."
+  $stderr.puts "WARNING: Only fully specified PRs (owner/name#123) will be understood."
+end
+
+TOKEN = options[:token] || ENV["GH_GH_PAT"] || ENV["GITHUB_TOKEN"]
+if TOKEN.nil?
+  $stderr.puts "You must specify an access token via one of:"
+  $stderr.puts "- $GITHUB_TOKEN"
+  $stderr.puts "- $GH_GH_PAT"
+  $stderr.puts "- The -t/--token command line argument"
+  exit 1
+end
+
+GRAPHQL_URI = URI("https://api.github.com/graphql")
+
+class PullRequest
+  def initialize(owner, name, number)
+    @owner = owner
+    @name = name
+    @number = number
+  end
+
+  attr_reader :owner, :name, :number
+
+  def to_s
+    "#{owner}/#{name}##{number}"
+  end
+end
+
+pull_requests = pull_request_phrases.flat_map do |phrase|
+  if phrase =~ /\A([^\/]+)\/([^\/]+)#(\d+)\z/
+    [PullRequest.new($1, $2, $3)]
+  elsif default_repo_owner && default_repo_name && phrase =~ /\A#?(\d+)\z/
+    [PullRequest.new(default_repo_owner, default_repo_name, $1)]
+  else
+    $stderr.puts "Unable to parse pull request from #{phrase.inspect}."
+    []
+  end
+end
+
+if pull_requests.none?
+  puts opts
+  exit 0
+end
+
+def query_request(query:, variables:)
+  request = Net::HTTP::Post.new(GRAPHQL_URI, "Authorization": "bearer #{TOKEN}", "Content-Type": "application/json")
+  request.body = { query: query, variables: variables }.to_json
+  response = Net::HTTP.start(GRAPHQL_URI.hostname, GRAPHQL_URI.port, use_ssl: GRAPHQL_URI.scheme == "https") do |http|
+    http.request(request)
+  end
+
+  if response.code != "200"
+    $stderr.puts "Unable to query GraphQL API: #{response.message}"
+    exit 1
+  end
+
+  payload = JSON.parse(response.body)
+
+  if payload["errors"]&.any?
+    $stderr.puts "The GraphQL query encountered errors:"
+    payload["errors"].each do |error|
+      $stderr.puts "\n- #{error["message"]}"
+      $stderr.puts "  type: #{error["type"]}"
+      $stderr.puts "  path: #{error["path"].join(" > ")}"
+    end
+    exit 1
+  end
+  data = payload["data"]
+end
+
+class Status
+  def initialize(is_required, url)
+    @is_required = is_required
+    @url = url
+  end
+
+  attr_reader :url
+
+  def required?
+    @is_required
+  end
+
+  def pending?
+    true
+  end
+
+  def succeeded?
+    false
+  end
+
+  def neutral?
+    false
+  end
+
+  def failed?
+    false
+  end
+
+  def emoji
+    case
+    when pending?
+      "⏳"
+    when succeeded?
+      "✅"
+    when neutral?
+      "☑️"
+    when failed?
+      "❌"
+    end
+  end
+
+  def summarize
+    ""
+  end
+end
+
+class CheckRunStatus < Status
+  def initialize(is_required:, url:, suite_name:, run_name:, status:, conclusion:)
+    super(is_required, url)
+    @suite_name = suite_name
+    @run_name = run_name
+    @status = status
+    @conclusion = conclusion
+  end
+
+  def pending?
+    @status != "COMPLETED"
+  end
+
+  def succeeded?
+    @status == "COMPLETED" && @conclusion == "SUCCESS"
+  end
+
+  def neutral?
+    @status == "COMPLETED" && %w(NEUTRAL STALE).include?(@conclusion)
+  end
+
+  def failed?
+    @status == "COMPLETED" && %w(TIMED_OUT CANCELLED FAILURE STARTUP_FAILURE).include?(@conclusion)
+  end
+
+  def summarize
+    str = "#{@suite_name} / #{@run_name}"
+    str << " [#{@conclusion.downcase}]" unless pending?
+    str << " \e[4m#{url}\e[0m" if failed?
+    str
+  end
+end
+
+class ContextStatus < Status
+  def initialize(is_required:, url:, context:, state:)
+    super(is_required, url)
+    @context = context
+    @state = state
+    @url = url
+  end
+
+  def pending?
+    %w(EXPECTED PENDING).include?(@state)
+  end
+
+  def succeeded?
+    @state == "SUCCESS"
+  end
+
+  def failed?
+    %w(ERROR FAILURE).include?(@state)
+  end
+
+  def summarize
+    str = "#{@context}"
+    str << " [#{@state.downcase}]" unless pending?
+    str << " \e[4m#{url}\e[0m" if failed?
+    str
+  end
+end
+
+def query_pull_request_status(pull_request)
+  q = <<-GQL
+    query($owner: String!, $name: String!, $number: Int!) {
+      repository(owner: $owner, name: $name) {
+        pullRequest(number: $number) {
+          commits(last: 1) {
+            nodes {
+              commit {
+                statusCheckRollup {
+                  state
+                  contexts(first: 100) {
+                    nodes {
+                      __typename
+                      ... on CheckRun {
+                        checkSuite {
+                          app {
+                            name
+                          }
+                        }
+                        name
+                        title
+                        status
+                        conclusion
+                        detailsUrl
+                      }
+                      ... on StatusContext {
+                        context
+                        state
+                        targetUrl
+                      }
+                      ... on RequirableByPullRequest {
+                        isRequired(pullRequestNumber: $number)
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  GQL
+
+  data = query_request(query: q, variables: {
+    owner: pull_request.owner,
+    name: pull_request.name,
+    number: pull_request.number.to_i,
+  })
+
+  rollup = data["repository"]["pullRequest"]["commits"]["nodes"][0]["commit"]["statusCheckRollup"]
+  rollup["contexts"]["nodes"].flat_map do |context|
+    case context["__typename"]
+    when "CheckRun"
+      [CheckRunStatus.new(
+        is_required: context["isRequired"],
+        url: context["detailsUrl"],
+        suite_name: context["checkSuite"]["app"]["name"],
+        run_name: context["name"],
+        status: context["status"],
+        conclusion: context["conclusion"]
+      )]
+    when "StatusContext"
+      [ContextStatus.new(
+        is_required: context["isRequired"],
+        url: context["targetUrl"],
+        context: context["context"],
+        state: context["state"]
+      )]
+    else
+      []
+    end
+  end
+end
+
+def report(building_pull_requests, verbose:)
+  statuses_by_pull_request = {}
+  building_pull_requests.each do |pull_request|
+    statuses_by_pull_request[pull_request] = query_pull_request_status(pull_request)
+  end
+
+  yield if block_given?
+
+  building_pull_requests.select do |pull_request|
+    statuses = statuses_by_pull_request.fetch(pull_request, [])
+
+    puts "\n\e[1m#{pull_request}\e[0m"
+    statuses.each do |status|
+      next if (status.succeeded? || status.neutral?) && !verbose
+
+      puts "  #{status.emoji} #{status.summarize}"
+    end
+
+    statuses.any?(&:pending?)
+  end
+end
+
+if options[:wait]
+  remaining_pull_requests = pull_requests
+  while remaining_pull_requests.any?
+    remaining_pull_requests = report(remaining_pull_requests, verbose: options[:verbose]) do
+      puts `clear`
+      puts Time.now.strftime("\n⌚️ %I:%M:%S\n")
+    end
+    sleep options[:delay] if remaining_pull_requests.any?
+  end
+else
+  report(pull_requests, verbose: options[:verbose])
+end
