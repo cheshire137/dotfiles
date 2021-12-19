@@ -1,0 +1,174 @@
+#!/usr/bin/env ruby
+
+# Taken from https://github.com/smashwilson/dotfiles/blob/e2355d8d99edb17e7a94e373f7e99725a6f7f9f6/bin/pr-review-status
+require "optparse"
+require "json"
+require "net/http"
+
+options = {
+  all_repos: false,
+  repos: [],
+}
+OptionParser.new do |opts|
+  opts.banner = "Usage: pr-review-status [options]"
+
+  opts.on("-t", "--token TOKEN", "GitHub API personal access token") do |token|
+    options[:token] = token
+  end
+
+  opts.on("-r", "--repo OWNER/NAME", "Limit results to PRs opened in this repo") do |nwo|
+    options[:repos] << nwo
+  end
+
+  opts.on("--all-repos", "Include results from all repos") do
+    options[:all_repos] = true
+  end
+
+  opts.on("-h", "--help", "Display this message") do
+    puts opts
+    exit
+  end
+end.parse!
+
+TOKEN = options[:token] || ENV["GH_GH_PAT"] || ENV["GITHUB_TOKEN"]
+if TOKEN.nil?
+  $stderr.puts "You must specify an access token via one of:"
+  $stderr.puts "- $GITHUB_TOKEN"
+  $stderr.puts "- $GH_GH_PAT"
+  $stderr.puts "- The -t/--token command line argument"
+  exit 1
+end
+
+GRAPHQL_URI = URI("https://api.github.com/graphql")
+if ENV["GITHUB_REPOSITORY"] && options[:repos].empty? && !options[:all_repos]
+  options[:repos] << ENV["GITHUB_REPOSITORY"]
+end
+
+search = "is:pr author:@me state:open"
+options[:repos].each { |nwo| search << " repo:#{nwo}" }
+
+query = <<GQL
+  query($search: String!) {
+    search(query: $search, first: 30, type: ISSUE) {
+      nodes {
+        ... on PullRequest {
+          number
+          title
+          baseRepository {
+            nameWithOwner
+          }
+          url
+          isDraft
+          reviews(first: 20) {
+            nodes {
+              author {
+                login
+              }
+              state
+              onBehalfOf(first: 5) {
+                nodes {
+                  name
+                }
+              }
+            }
+          }
+          reviewRequests(first: 20) {
+            nodes {
+              asCodeOwner
+              requestedReviewer {
+                ... on User {
+                  login
+                }
+                ... on Team {
+                  slug
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+GQL
+
+variables = {
+  search: search
+}
+
+request = Net::HTTP::Post.new(GRAPHQL_URI, "Authorization": "bearer #{TOKEN}", "Content-Type": "application/json")
+request.body = { query: query, variables: variables }.to_json
+response = Net::HTTP.start(GRAPHQL_URI.hostname, GRAPHQL_URI.port, use_ssl: GRAPHQL_URI.scheme == "https") do |http|
+  http.request(request)
+end
+
+if response.code != "200"
+  $stderr.puts "Unable to query GraphQL API: #{response.message}"
+  exit 1
+end
+
+payload = JSON.parse(response.body)
+
+if payload["errors"]&.any?
+  $stderr.puts "The GraphQL query encountered errors:"
+  payload["errors"].each do |error|
+    $stderr.puts "\n- #{error["message"]}"
+    $stderr.puts "  type: #{error["type"]}"
+    $stderr.puts "  path: #{error["path"].join(" > ")}"
+  end
+  exit 1
+end
+data = payload["data"]
+
+puts "Pull requests:"
+
+data["search"]["nodes"].each do |pull_request|
+  next if pull_request["isDraft"]
+
+  latest_status = {}
+  pull_request["reviews"]["nodes"].each do |rev|
+    rev["onBehalfOf"]["nodes"].each do |on_behalf_of|
+      latest_status[on_behalf_of["name"]] = rev["state"]
+    end
+  end
+
+  approval_count = latest_status.values.count { |status| %w(APPROVED DISMISSED).include?(status) }
+  pending_count = latest_status.values.count { |status| %w(COMMENTED CHANGES_REQUESTED).include?(status) }
+  request_count = pull_request["reviewRequests"]["nodes"].count { |req| req["asCodeOwner"] }
+
+  next if approval_count + pending_count + request_count == 0
+
+  message = "- "
+  message << pull_request["title"]
+  message << " [#{approval_count} / #{request_count + pending_count + approval_count}]"
+  puts
+  puts "\e[4m#{pull_request["url"]}\e[0m"
+  puts "\e[1m#{pull_request["title"]}\e[0m [#{approval_count} / #{request_count + pending_count + approval_count}]"
+
+  pull_request["reviews"]["nodes"].each do |rev|
+    next if rev["onBehalfOf"]["nodes"].none?
+
+    review_line = "  "
+    case rev["state"]
+    when "APPROVED"
+      review_line << "✅ "
+    when "DISMISSED"
+      review_line << "☑️  "
+    when "CHANGES_REQUESTED"
+      review_line << "❌ "
+    when "COMMENTED"
+      review_line << "💬 "
+    end
+    review_line << "@#{rev["author"]["login"]} for "
+    review_line << rev["onBehalfOf"]["nodes"].map { |behalf| behalf["name"] }.join(", ")
+    puts review_line
+  end
+
+  pull_request["reviewRequests"]["nodes"].each do |req|
+    next unless req["asCodeOwner"]
+    reviewer = req["requestedReviewer"]
+
+    puts "  ⏳ #{reviewer["slug"] || reviewer["login"]}"
+  end
+end
+
+# pp payload
