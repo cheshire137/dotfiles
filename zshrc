@@ -64,6 +64,9 @@ alias rdm='bin/rake db:migrate db:test:prepare'
 alias gitt='git'
 alias ctags="`brew --prefix`/bin/ctags"
 
+# Add git count-lines alias from https://stackoverflow.com/a/7010890
+git config --global alias.count-lines "! git log --author=\"\$1\" --pretty=tformat: --numstat | awk '{ add += \$1; subs += \$2; loc += \$1 - \$2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\n\", add, subs, loc }' #"
+
 alias dcemptytrash='docker rm $(docker ps -q -f status=exited)'
 alias reset_docker="docker-compose kill; docker-compose rm --force"
 alias dcr="docker-compose run --rm"
