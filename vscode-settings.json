@@ -19,7 +19,8 @@
         "strings": true
     },
     "files.associations": {
-        "*.erb": "erb"
+        "*.erb": "erb",
+        "*.html.erb": "erb"
     },
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,

@@ -1,0 +1,125 @@
+  0  0     Skyrim.esm
+  1  1     Update.esm
+  2  2     Dawnguard.esm
+  3  3     HearthFires.esm
+  4  4     Dragonborn.esm
+  5  5     ccBGSSSE001-Fish.esm
+254 FE   0 ccQDRSSE001-SurvivalMode.esl
+254 FE   1 ccBGSSSE037-Curios.esl
+  6  6     ccBGSSSE025-AdvDSGS.esm
+  7  7     Unofficial Skyrim Special Edition Patch.esp
+254 FE   2 oblivioninteractors.esl
+254 FE   3 UHDAP - MusicHQ.esp
+254 FE   4 Cathedral - 3D Mountain Flowers.esp
+  8  8     Occ_Skyrim_Tamriel.esp
+  9  9     Lanterns Of Skyrim II.esm
+ 10  a     GeneralStores.esm
+254 FE   5 RealisticWaterTwo - Resources.esm
+ 11  b     SkyUI_SE.esp
+ 12  c     TrueStormsSE.esp
+ 13  d     SMIM-SE-Merged-All.esp
+ 14  e     Better Dynamic Snow SE.esp
+254 FE   6 JaxonzMCMKicker.esp
+254 FE   7 MCMHelper.esp
+ 15  f     AMatterOfTime.esp
+ 16 10     SkyHUD.esp
+ 17 11     iHUD.esp
+254 FE   8 Bears of the North.esp
+254 FE   9 Simply No Fast Travel.esp
+ 18 12     BarenziahQuestMarkers.esp
+ 19 13     Dark Face Bug Fix.esp
+254 FE   a SPTDiverseGuardsSkyrimSE.esp
+ 20 14     Vampire Lord Drain And Serana Changed V1.esp
+ 21 15     VampireLordsCanActivate.esp
+ 22 16     EnhancedLightsandFX.esp
+ 23 17     Relationship Dialogue Overhaul.esp
+ 24 18     LarsepanUMF.esp
+ 25 19     LarsepanUMF-RDO-USSEP-Patch.esp
+ 26 1a     Castle Volkihar Rebuilt.esp
+ 27 1b     Cutting Room Floor.esp
+ 28 1c     CollegeOfWinterholdImmersive.esp
+ 29 1d     Verdant - A Skyrim Grass Plugin SSE Version.esp
+ 30 1e     Landscape Fixes For Grass Mods.esp
+ 31 1f     JKs Skyrim.esp
+ 32 20     SoundsofSkyrimComplete.esp
+254 FE   b ELFX Fixes.esp
+254 FE   c LoS II - JKs Skyrim patch.esp
+ 33 21     JK's Blue Palace.esp
+254 FE   d Castle Volkihar Rebuilt - ELFX Patch.esp
+254 FE   e Castle Volkihar Rebuilt - RDO Patch.esp
+254 FE   f obliviongrabbers.esp
+ 34 22     Diversity - A Character Overhaul.esp
+ 35 23     SPTConsistentOlderPeopleSE.esp
+ 36 24     goodbrother.esp
+ 37 25     Hothtrooper44_ArmorCompilation.esp
+ 38 26     Oakwood.esp
+254 FE  10 CWIEnLFXSEPatch.esp
+ 39 27     ZIA_Complete Pack.esp
+ 40 28     CFTO.esp
+ 41 29     Run For Your Lives.esp
+ 42 2a     Cloaks.esp
+254 FE  11 JK's White Phial.esp
+ 43 2b     Dawnstar.esp
+ 44 2c     Inigo.esp
+ 45 2d     LoS II - Lantern Workers.esp
+254 FE  12 JKs Skyrim_Dawnstar_Patch.esp
+ 46 2e     Bring Out Your Dead.esp
+ 47 2f     Shor's Stone.esp
+254 FE  13 Landscape For Grass Mods JK'S Skyrim.esp
+ 48 30     Immersive Patrols II.esp
+254 FE  14 JKs Skyrim_BOYD_Patch.esp
+ 49 31     Telengard.esp
+ 50 32     EastEmpirePendantsMarkers.esp
+ 51 33     SkyrimIsWindy.esp
+ 52 34     Skyrim Flora Overhaul.esp
+254 FE  15 LoS II - CRF patch.esp
+254 FE  16 CFTO-JK-Patch.esp
+ 53 35     Soljund's Sinkhole.esp
+ 54 36     Provincial Courier Service.esp
+254 FE  17 JKs Skyrim_Cutting Room Floor_Patch.esp
+254 FE  18 Landscape Fixes For Grass mods - Cutting Room Floor Locations.esp
+254 FE  19 Landscape For Grass Mods - Oakwood PATCH.esp
+ 55 37     The Paarthurnax Dilemma.esp
+254 FE  1a LoS II - Oakwood patch.esp
+ 56 38     Landscape For Grass Mods -Immersive Citizens PATCH.esp
+ 57 39     CFTO - Arthmoor Danwstar Patch.esp
+254 FE  1b LoS II - Soljund's Skinkhole patch.esp
+254 FE  1c LoS II - Telengard patch.esp
+ 58 3a     ELFX Fake Light Remover.esp
+ 59 3b     surreal lighting.esp
+ 60 3c     more plants all extra.esp
+ 61 3d     RichMerchantsSkyrim_x2.esp
+ 62 3e     MorrowindImports.esp
+ 63 3f     WetandCold.esp
+ 64 40     TrueStorms_Wet&Cold_Patch.esp
+ 65 41     Wet&Cold - WaterFix - Addon.esp
+254 FE  1d SoS_TrueStorms_Patch.esp
+ 66 42     Chesko_LoreBasedLoadingScreens.esp
+ 67 43     Beards.esp
+ 68 44     Hothtrooper44_Armor_Ecksstra.esp
+254 FE  1e aMidianBorn_Book of Silence.esp
+ 69 45     dD - Enhanced Blood Main.esp
+ 70 46     icepenguinworldmapclassic.esp
+ 71 47     Dr_Bandolier.esp
+ 72 48     imp_helm_legend.esp
+ 73 49     imp_helm_Immersive_Armors.esp
+ 74 4a     imp_helm_USSEP.esp
+ 75 4b     Cloaks - Dawnguard.esp
+ 76 4c     Cloaks - USSEP Patch.esp
+254 FE  1f LoS II - SMIM patch.esp
+254 FE  20 CWICRFSEPatch.esp
+254 FE  21 Landscape For Grass Mods Arthmoor's Shor's Stone PATCH.esp
+254 FE  22 Landscape For Grass Mods -Provincial Courier PATCH.esp
+ 77 4d     Ordinator - Perks of Skyrim.esp
+254 FE  23 CWIOrdinatorPatchSSE.esp
+ 78 4e     tcbm.esp
+ 79 4f     Alternate Start - Live Another Life.esp
+254 FE  24 Landscape Fixes For Grass mods - Alternate start Locations.esp
+ 80 50     ELFXEnhancer.esp
+254 FE  25 ELFXEnhancer-BrighterLivingSpaces.esp
+254 FE  26 SoS_ELFX+Enhancer_Patch.esp
+ 81 51     elfx enhancer tweaks brighter.esp
+ 82 52     RealisticWaterTwo.esp
+254 FE  27 JKs Skyrim_RWT_Patch.esp
+254 FE  28 ELFX Fixes Ragged Flagon Fix.esp
+254 FE  29 Dawnguard Map Markers.esp
