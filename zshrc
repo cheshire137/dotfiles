@@ -49,6 +49,8 @@ plugins=(git brew github osx jgrowl npm zsh-syntax-highlighting)
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 
+export VISUAL="$EDITOR"
+
 export GOPATH="$HOME/code/go/"
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH="/usr/local/opt/krb5/bin:/usr/local/go/bin:/usr/local/opt/mysql@5.7/bin:$HOME/bin:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
