@@ -49,6 +49,7 @@ plugins=(git brew github osx jgrowl npm zsh-syntax-highlighting)
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 
+export EDITOR="code --wait"
 export VISUAL="$EDITOR"
 
 export GOPATH="$HOME/code/go/"
