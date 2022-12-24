@@ -79,7 +79,7 @@ alias dcreboot="docker-compose stop && docker-compose rm -f && if [ -f dev-in-do
 #eval $(ssh-agent)
 #ssh-add ~/.ssh/id_rsa
 
-eval "$(nodenv init -)"
+# eval "$(nodenv init -)"
 
 #eval "$(docker-machine env default --shell=bash)"
 
