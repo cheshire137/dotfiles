@@ -90,3 +90,6 @@ fortune | cowsay
 [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 # added by travis gem
 [ -f /Users/cheshire137/.travis/travis.sh ] && source /Users/cheshire137/.travis/travis.sh
+
+# https://www.npmjs.com/package/@githubnext/github-copilot-cli
+eval "$(github-copilot-cli alias -- "$0")"
