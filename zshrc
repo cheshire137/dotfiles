@@ -91,5 +91,7 @@ fortune | cowsay
 # added by travis gem
 [ -f /Users/cheshire137/.travis/travis.sh ] && source /Users/cheshire137/.travis/travis.sh
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # https://www.npmjs.com/package/@githubnext/github-copilot-cli
 eval "$(github-copilot-cli alias -- "$0")"
