@@ -49,9 +49,11 @@ plugins=(git brew github osx jgrowl npm zsh-syntax-highlighting)
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 
+export EDITOR="/Users/cheshire137/bin/code-wait.sh"
+export VISUAL="$EDITOR"
 export GOPATH="$HOME/code/go/"
 export JAVA_HOME=`/usr/libexec/java_home`
-export PATH="/usr/local/opt/krb5/bin:/usr/local/go/bin:/usr/local/opt/mysql@5.7/bin:$HOME/bin:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
+export PATH="/usr/local/go/bin:/usr/local/opt/krb5/bin:/usr/local/opt/mysql@5.7/bin:$HOME/bin:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:/usr/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,6 +66,9 @@ alias rdm='bin/rake db:migrate db:test:prepare'
 alias gitt='git'
 alias ctags="`brew --prefix`/bin/ctags"
 
+# Add git count-lines alias from https://stackoverflow.com/a/7010890
+git config --global alias.count-lines "! git log --author=\"\$1\" --pretty=tformat: --numstat | awk '{ add += \$1; subs += \$2; loc += \$1 - \$2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\n\", add, subs, loc }' #"
+
 alias dcemptytrash='docker rm $(docker ps -q -f status=exited)'
 alias reset_docker="docker-compose kill; docker-compose rm --force"
 alias dcr="docker-compose run --rm"
@@ -74,7 +79,7 @@ alias dcreboot="docker-compose stop && docker-compose rm -f && if [ -f dev-in-do
 #eval $(ssh-agent)
 #ssh-add ~/.ssh/id_rsa
 
-eval "$(nodenv init -)"
+# eval "$(nodenv init -)"
 
 #eval "$(docker-machine env default --shell=bash)"
 
@@ -85,3 +90,8 @@ fortune | cowsay
 [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 # added by travis gem
 [ -f /Users/cheshire137/.travis/travis.sh ] && source /Users/cheshire137/.travis/travis.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# https://www.npmjs.com/package/@githubnext/github-copilot-cli
+eval "$(github-copilot-cli alias -- "$0")"

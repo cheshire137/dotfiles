@@ -1,4 +1,5 @@
-export EDITOR=vim
+#export EDITOR=vim
+export EDITOR="/Users/cheshire137/bin/code-wait.sh"
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 
 alias grep='grep --color=always'
