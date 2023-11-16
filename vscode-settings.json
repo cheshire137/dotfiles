@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Github Light Theme - Gray",
+    "workbench.colorTheme": "Noctis Bordo",
     "window.closeWhenEmpty": true,
     "editor.detectIndentation": true,
     "editor.showFoldingControls": "always",
@@ -30,8 +30,10 @@
     "extensions.ignoreRecommendations": false,
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.fontFamily": "Rec Mono Affine, Hack, Iosevka Term, SF Mono, Anonymous Pro, Cascadia Mono, Cascadia Code, Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
+    "editor.codeLens": true,
+    "editor.fontFamily": "'Monaspace Neon', Rec Mono Affine, Hack, Iosevka Term, SF Mono, Anonymous Pro, Cascadia Mono, Cascadia Code, Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    // Ligatures from https://github.com/githubnext/monaspace
+    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss06', 'ss07', 'ss08'",
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.fontSize": 17,
     "terminal.integrated.lineHeight": 1.2,
@@ -50,6 +52,7 @@
     "solargraph.checkGemVersion": false,
     "solargraph.diagnostics": true,
     "solargraph.hover": false,
+    // "powermode.enabled": true,
     "emmet.includeLanguages": {
         "html.erb": "html",
         "erb": "html"
@@ -73,11 +76,8 @@
     "editor.inlineSuggest.enabled": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "html.format.endWithNewline": true,
     "workbench.sideBar.location": "right",
     "githubPullRequests.queries": [
-
-
         {
             "label": "Waiting for my review",
             "query": "is:open review-requested:${user} draft:false"
@@ -112,4 +112,48 @@
     "editor.wordWrapColumn": 118,
     "files.trimTrailingWhitespace": true,
     "editor.bracketPairColorization.enabled": true,
+    "git.confirmSync": false,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false,
+        "ruby": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "debug.onTaskErrors": "debugAnyway",
+    "settingsSync.ignoredExtensions": [
+        "shopify.ruby-lsp"
+    ],
+    "git.enableSmartCommit": true,
+    "[ruby]": {
+        "editor.formatOnSave": false
+    },
+    "workbench.preferredDarkColorTheme": "Noctis Bordo",
+    "workbench.preferredLightColorTheme": "Noctis Lux",
+    "github.codespaces.showPerformanceExplorer": true,
+    "editor.stickyScroll.enabled": true,
+    "github.copilot.advanced": {},
+    "gitlens.codeLens.recentChange.command": "gitlens.openCommitOnRemote",
+    "gitlens.codeLens.authors.command": "gitlens.openCommitOnRemote",
+    "workbench.iconTheme": "vscode-icons",
+    "gitlens.views.repositories.showTags": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "jest.autoRun": {
+        "watch": false
+    },
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
 }
