@@ -16,8 +16,8 @@
   branchdate = !git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
   recentbranches = !git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | grep --invert-match 'months' | grep --invert-match 'year' | grep --invert-match '[56789] weeks ago'
   branchname = !git rev-parse --abbrev-ref HEAD
-  # deletes local branches that have been merged to master
-  cleanup = !git branch --merged master | grep -v 'master$' | xargs git branch -d
+  # deletes local branches that have been merged to the default branch of the repo
+  cleanup = !git branch --merged $(git branch -rl '*/HEAD' | awk -F/ '{print $NF}') | grep -v "$(git branch -rl '*/HEAD' | awk -F/ '{print $NF}')\$" | xargs git branch -d
   updatefrommaster = !if [[ $(git rev-parse --abbrev-ref HEAD) = "master" ]]; then echo "you're already on master"; else git pull && git checkout master && git pull && git checkout - && git merge master; fi
   switchto = !sh -c 'git checkout $1 && git pull' -
   coi = !git branch $@ | cut -c 3- | fzf --reverse --preview 'git log --patch --color {}...{}~5' | xargs git checkout
