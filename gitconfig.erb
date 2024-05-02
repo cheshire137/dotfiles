@@ -21,6 +21,7 @@
   # deletes local branches that have been merged to main
   cleanup = !git branch --merged main | egrep -v '\\s+main$' | xargs git branch -d
   updatefrommaster = !if [[ $(git rev-parse --abbrev-ref HEAD) = "master" ]]; then echo "you're already on master"; else git pull && git checkout master && git pull && git checkout - && git merge master; fi
+  updatefrommain = !if [[ $(git rev-parse --abbrev-ref HEAD) = "main" ]]; then echo "you're already on main"; else git pull && git checkout main && git pull && git checkout - && git merge main; fi
   switchto = !sh -c 'git checkout $1 && git pull' -
   coi = !git branch $@ | cut -c 3- | fzf --reverse --preview 'git log --patch --color {}...{}~5' | xargs git checkout
   cp = cherry-pick
