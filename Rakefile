@@ -21,7 +21,11 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.rdoc README.md README.mkd LICENSE oh-my-zsh]
+  files = Dir['*'] - ["Rakefile", "README.rdoc", "README.md", "README.mkd", "LICENSE", "oh-my-zsh",
+    "Default (OSX).sublime-keymap", "default.itermcolors", "Diablo IV - LocalPrefs.txt",
+    "GitHub.tmTheme", "Oblivion.ini", "Preferences.sublime-settings", "Ruby.sublime-settings",
+    "set-upstream.sh", "skyrim-special-edition-loot-mod-list.txt", "setup_osx", "Skyrim.ini",
+    "SkyrimPrefs.ini", "userChrome.css", "vscode-settings.json"]
   #files << "oh-my-zsh/custom/plugins/jgrowl"
   #files << "oh-my-zsh/custom/jgrowl.zsh-theme"
   files.each do |file|
