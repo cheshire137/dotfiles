@@ -64,14 +64,7 @@
     ],
     "git.autofetch": true,
     "editor.acceptSuggestionOnEnter": "smart",
-    "copilot.enabled": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false
-    },
     "oneDarkPro.vivid": false,
-    "github.copilot.autocomplete.enable": true,
     "editor.inlineSuggest.enabled": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -115,7 +108,7 @@
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
-        "plaintext": true,
+        "plaintext": false,
         "markdown": false,
         "scminput": false,
         "ruby": true
