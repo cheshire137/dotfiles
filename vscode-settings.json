@@ -139,7 +139,7 @@
     "workbench.iconTheme": "vscode-icons",
     "gitlens.views.repositories.showTags": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
