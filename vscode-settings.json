@@ -34,7 +34,8 @@
     // Ligatures from https://github.com/githubnext/monaspace
     "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss06', 'ss07', 'ss08'",
     "workbench.startupEditor": "newUntitledFile",
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.letterSpacing": 1.6,
     "terminal.integrated.lineHeight": 1.2,
     "terminal.integrated.minimumContrastRatio": 4.5,
     "debug.console.fontSize": 14,
@@ -57,7 +58,7 @@
         "erb": "html"
     },
     "emmet.showSuggestionsAsSnippets": true,
-    "terminal.integrated.fontFamily": "Anonymous Pro, Rec Mono Affine, Iosevka Term, SF Mono, Cascadia Mono, Cascadia Code, Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Comic Mono, Anonymous Pro, Rec Mono Affine, Iosevka Term, SF Mono, Cascadia Mono, Cascadia Code, Source Code Pro, Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "window.zoomLevel": 1,
     "editor.rulers": [
         118
