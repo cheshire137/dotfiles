@@ -5,7 +5,6 @@
     "editor.showFoldingControls": "always",
     "editor.fontSize": 16,
     "workbench.editor.enablePreview": false,
-    "workbench.editor.tabCloseButton": "off",
     "editor.tabSize": 2,
     "editor.wordSeparators": "./\\()\"'-,.;<>~!@#$%^&*|+=[]{}`~?",
     "editor.wordWrap": "on",
@@ -156,4 +155,5 @@
         "configurations": [],
         "compounds": []
     },
+    "workbench.editor.tabActionCloseVisibility": false,
 }
