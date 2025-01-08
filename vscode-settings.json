@@ -85,7 +85,6 @@
         }
     ],
     "githubIssues.queries": [
-
         {
             "label": "My Issues",
             "query": "is:open is:issue assignee:${user} archived:false org:${owner} "
@@ -150,4 +149,5 @@
         "compounds": []
     },
     "workbench.editor.tabActionCloseVisibility": false,
+    "githubPullRequests.commentExpandState": "collapseAll",
 }
