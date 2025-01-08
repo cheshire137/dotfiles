@@ -176,6 +176,15 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
 endif
 
+call plug#begin()
+
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'joshdick/onedark.vim'
+Plug 'ciaranm/inkpot'
+
+call plug#end()
+
 " Color scheme
 " colorscheme vividchalk
 colorscheme inkpot
@@ -217,4 +226,3 @@ function! OpenURL()
   endif
 endfunction
 map <Leader>w :call OpenURL()<CR>
-
