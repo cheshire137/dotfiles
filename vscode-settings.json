@@ -8,7 +8,7 @@
     "editor.tabSize": 2,
     "editor.wordSeparators": "./\\()\"'-,.;<>~!@#$%^&*|+=[]{}`~?",
     "editor.wordWrap": "on",
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     // Controls whether suggestions should automatically show up while typing.
@@ -26,6 +26,8 @@
     "explorer.confirmDelete": false,
     "go.useLanguageServer": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnPaste.enabled": false,
+    "typescript.autoClosingTags": false,
     "extensions.ignoreRecommendations": false,
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -65,7 +67,6 @@
     ],
     "git.autofetch": true,
     "editor.acceptSuggestionOnEnter": "smart",
-    "oneDarkPro.vivid": false,
     "editor.inlineSuggest.enabled": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -73,15 +74,15 @@
     "githubPullRequests.queries": [
         {
             "label": "Waiting for my review",
-            "query": "is:open review-requested:${user} draft:false"
+            "query": "repo:${owner}/${repository} is:open review-requested:${user} draft:false"
         },
         {
             "label": "Assigned to me",
-            "query": "is:open assignee:${user} -author:hubot sort:updated-desc archived:false -user:${user}"
+            "query": "repo:${owner}/${repository} is:open assignee:${user} -author:hubot sort:updated-desc archived:false -user:${user}"
         },
         {
             "label": "Created by me",
-            "query": "is:open author:${user} sort:updated-desc archived:false -user:${user}"
+            "query": "repo:${owner}/${repository} is:open author:${user} sort:updated-desc archived:false -user:${user}"
         }
     ],
     "githubIssues.queries": [
@@ -105,6 +106,7 @@
     "files.trimTrailingWhitespace": true,
     "editor.bracketPairColorization.enabled": true,
     "git.confirmSync": false,
+    "ruby.rubocop.onSave": false,
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
@@ -119,9 +121,7 @@
         "shopify.ruby-lsp"
     ],
     "git.enableSmartCommit": true,
-    "[ruby]": {
-        "editor.formatOnSave": false
-    },
+    "editor.formatOnSave": false,
     "workbench.preferredDarkColorTheme": "Noctis Bordo",
     "workbench.preferredLightColorTheme": "Noctis Lux",
     "github.codespaces.showPerformanceExplorer": true,
@@ -150,4 +150,20 @@
     },
     "workbench.editor.tabActionCloseVisibility": false,
     "githubPullRequests.commentExpandState": "collapseAll",
+    "githubPullRequests.pullBranch": "never",
+    "go.toolsManagement.autoUpdate": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "never",
+        "source.removeUnusedImports": "never",
+        "source.removeUnused.ts": "never",
+        "source.sortImports": "never",
+        "source.fixAll": "never",
+        "source.addMissingImports.ts": "never",
+        "source.fixAll.eslint": "never",
+        "source.fixAll.sorbet": "never",
+        "source.fixAll.stylelint": "never",
+        "source.fixAll.ts": "never",
+    },
+    "remote.autoForwardPortsSource": "hybrid",
+    "window.confirmBeforeClose": "keyboardOnly",
 }
