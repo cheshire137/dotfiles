@@ -53,7 +53,7 @@ export EDITOR="/Users/cheshire137/bin/code-wait.sh"
 export VISUAL="$EDITOR"
 export GIT_EDITOR="vim"
 export GOPATH="$HOME/code/go/"
-export JAVA_HOME=`/usr/libexec/java_home`
+# export JAVA_HOME=`/usr/libexec/java_home`
 export PATH="/opt/homebrew/bin:/usr/local/opt/krb5/bin:/usr/local/opt/mysql@5.7/bin:$HOME/bin:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:/usr/bin:$HOME/Library/Python/3.9/bin:/Users/cheshire137/.nodenv/versions/23.11.0/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
