@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Unfortunately, Codespaces doesn't have a way to open a default .code-workspace file,
+# see https://github.com/microsoft/vscode-remote-release/issues/3665
+file_path="/workspaces/.codespaces/.persistedshare/.workspace-opened"
+
+if [ ! -f "$file_path" ] && [ -d "/workspaces/github-ui" ]; then
+  touch "$file_path"
+  echo "First run, loading workspace"
+  code --reuse-window with-github-ui.code-workspace
+fi
