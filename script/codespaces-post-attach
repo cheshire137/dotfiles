@@ -7,9 +7,10 @@ echo "==> Running Codespaces post-attach script"
 file_path="/workspaces/.codespaces/.persistedshare/.workspace-opened"
 dotfiles_dir="/workspaces/.codespaces/.persistedshare/dotfiles"
 github_ui_dir="/workspaces/github-ui"
+github_dir="/workspaces/github"
 
 if [ ! -f "$file_path" ]; then
-  if [ -d "$github_ui_dir" ] && [ -d "$dotfiles_dir" ]; then
+  if [ -d "$github_dir" ] && [ -d "$github_ui_dir" ] && [ -d "$dotfiles_dir" ]; then
     touch "$file_path"
     echo "==> First run, loading workspace..."
     code --reuse-window $dotfiles_dir/with-github-ui.code-workspace
