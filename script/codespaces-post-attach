@@ -1,11 +1,21 @@
-#!/bin/bash
+#!/bin/sh
+
+echo "==> Running Codespaces post-attach script"
 
 # Unfortunately, Codespaces doesn't have a way to open a default .code-workspace file,
 # see https://github.com/microsoft/vscode-remote-release/issues/3665
 file_path="/workspaces/.codespaces/.persistedshare/.workspace-opened"
+dotfiles_dir="/workspaces/.codespaces/.persistedshare/dotfiles"
+github_ui_dir="/workspaces/github-ui"
 
-if [ ! -f "$file_path" ] && [ -d "/workspaces/github-ui" ]; then
-  touch "$file_path"
-  echo "First run, loading workspace"
-  code --reuse-window with-github-ui.code-workspace
+if [ ! -f "$file_path" ]; then
+  if [ -d "$github_ui_dir" ] && [ -d "$dotfiles_dir" ]; then
+    touch "$file_path"
+    echo "==> First run, loading workspace..."
+    code --reuse-window $github_ui_dir/with-github-ui.code-workspace
+  else
+    echo "==> $file_path does not exist, but $github_ui_dir and $dotfiles_dir are present."
+  fi
+elif [ -f "$file_path" ]; then
+  echo "==> $file_path exists, workspace already opened."
 fi
