@@ -18,3 +18,5 @@ if [ ! -f "$file_path" ]; then
 elif [ -f "$file_path" ]; then
   echo "==> $file_path exists, workspace already opened."
 fi
+
+exec zsh
