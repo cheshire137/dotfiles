@@ -1,3 +1,4 @@
 oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 vim/colors/*.vim
 vim/autoload/*.vim
+.DS_Store
