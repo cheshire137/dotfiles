@@ -13,8 +13,6 @@ if [ ! -f "$file_path" ]; then
     touch "$file_path"
     echo "==> First run, loading workspace..."
     code --reuse-window $github_ui_dir/with-github-ui.code-workspace
-  else
-    echo "==> $file_path does not exist, but $github_ui_dir and $dotfiles_dir are present."
   fi
 elif [ -f "$file_path" ]; then
   echo "==> $file_path exists, workspace already opened."
